@@ -1,0 +1,22 @@
+@startuml
+
+class Product {
+    - pname:String 
+    - price:Int
+    + Product()
+    + Product(String p1, int p2)
+    + getName():String 
+    + getPrice():Int 
+}
+
+class Drinks {
+    - amount:Int
+    + Drinks()
+    + Drinks(String d1, int d2, int d3)
+    + getAmount():Int 
+}
+
+Product <|-- Drinks : extends
+
+
+@enduml

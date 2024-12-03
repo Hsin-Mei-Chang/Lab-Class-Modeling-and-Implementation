@@ -1,0 +1,15 @@
+@startuml
+
+class Book {
+    - bname:String 
+    - isbn:String 
+    - price:Int 
+    + Book(String b1, String b2, int b3)
+    + String get_bname():String 
+    + String get_isbn():String 
+    + int get_price():Int
+    + int get_shipping():Int
+}
+
+
+@enduml

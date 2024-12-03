@@ -1,0 +1,23 @@
+@startuml
+
+class Player {
+    - name: String
+    - position: String
+    - number: int
+    + __init__(name: String, position: String, number: int)
+    + get_name(): String
+    + get_position(): String
+    + get_number(): int
+}
+
+class Team {
+    - name: String
+    - players: List<Player>
+    + __init__(name: String)
+    + add_player(player: Player)
+    + get_player_info(number: int): String
+}
+
+Player --* Team : "has many"
+
+@enduml

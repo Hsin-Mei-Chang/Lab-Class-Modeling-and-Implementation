@@ -1,0 +1,27 @@
+@startuml
+
+class Product {
+    - pname:String 
+    - price:Int
+    - number:Int
+    + Product()
+    + Product(String p1, int p2)
+    + getName():String 
+    + getPrice():Int 
+}
+
+class Store {
+    - storename:String
+    - storeID:Int
+    - address:String
+    - phone:String
+    + Drinks()
+    + Drinks(String d1, int d2, int d3)
+    + getAmount():Int 
+    + reviseProduct(pname: String, newDescription: String, newPrice: Int, newImage: String)
+    + createProduct(pname: String, description: String, price: Int, image: String)
+}
+
+Product <-- Store : manages
+
+@enduml
